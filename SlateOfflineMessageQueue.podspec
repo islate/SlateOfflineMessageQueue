@@ -11,6 +11,6 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/islate/SlateOfflineMessageQueue.git", :tag => s.version.to_s }
   s.platform     = :ios, '7.0'
   s.requires_arc = true
-  s.source_files = '*.{h,m}'
+  s.source_files = 'SlateOfflineMessageQueue/*.{h,m}'
   s.dependency 'SlateReachability'
 end
