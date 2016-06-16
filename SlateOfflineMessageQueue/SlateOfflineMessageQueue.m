@@ -3,7 +3,7 @@
 //  OfflineMessageQueue
 //
 //  Created by Xiangjian Meng on 15/5/20.
-//  Copyright (c) 2015年 mmslate. All rights reserved.
+//  Copyright (c) 2015年 cn.com.modernmedia. All rights reserved.
 //
 
 #import "SlateOfflineMessageQueue.h"
@@ -22,6 +22,11 @@
 + (instancetype)sharedQueue
 {
     return nil;
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)startQueueWithName:(NSString *)queueId
